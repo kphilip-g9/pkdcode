@@ -67,6 +67,8 @@ def execute_in_sandbox(payload: dict, time_limit_seconds: float = 2.0, memory_li
         return queue.get()
         
     return {"status": "SE", "message": "System Error: Background execution engine timed out structural trackers."}
+    
+# AN EXAMPLE FOR THE JUDGER
 
 if __name__ == "__main__":
     cf_payload = {
@@ -87,3 +89,5 @@ if __name__ == "__main__":
     
     print("\n--- [VERIFICATION STAGE 2] Running LeetCode Optimal Match Simulator ---")
     print("Verdict:", execute_in_sandbox(lc_payload, time_limit_seconds=2.0))
+
+# IF YOU RUN THIS FOR THE CODEFORCES ONE IT'LL GIVE TLE ERROR BUT FOR LEETCODE JUDGER IT'LL GIVE ACCEPTED AS IT'S JUST TO CHECK WHETHER IT RUNS FINE OR NOT
